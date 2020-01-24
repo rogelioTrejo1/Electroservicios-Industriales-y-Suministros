@@ -1,3 +1,6 @@
+// Importación de variables 
+@import "variables";
+
 * {
     font-family: Noto Sans HK, sans-serif;
     padding: 0;
@@ -14,7 +17,7 @@
 .titulos {
     padding: .5rem;
     border-style: solid;
-    border-color: transparent transparent grey
+    border-color: transparent transparent $grey;
 }
 
 .img {
@@ -25,13 +28,13 @@
     width: 100%;
     height: 100%;
     padding: .25rem;
-    background-color: #fff;
-    border: 1px solid #dee2e6;
+    background-color: $white;
+    border: 1px solid $border-color;
     border-radius: .25rem
 }
 
 .color-primario {
-    color: #ff8000
+    color: $primary-color;
 }
 
 .z-index {
@@ -54,7 +57,7 @@
 .title {
     width: 100%;
     height: 0%;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: $bg-color-galery;
     overflow: hidden;
     -webkit-transition: .5s ease;
     transition: .5s ease
@@ -76,6 +79,7 @@
     height: 100%
 }
 
+//Manejo de el mapa para mobiles
 @media (max-width:991px) {
     #map-Desktop {
         display: none
