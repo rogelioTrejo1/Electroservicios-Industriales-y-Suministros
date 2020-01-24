@@ -1,6 +1,6 @@
 //importtacion de imagenes
-import InstalacionesMedianayBaja from "../images/INSTALACIONES  MEDIANA Y BAJA.JPG";
-import MantenimientoSubestacion from "../images/MANTENIMIENTO A SUBESTACIONES.JPG";
+import InstalacionesMedianayBaja from "../images/Intalaciones Media y Baja.jpg";
+import MantenimientoSubestacion from "../images/Mantenimiento a Subestacion.jpg";
 import PruebasTransformadores from "../images/Pruebas a transformadores.jpg";
 import Proyectos from "../images/Proyectos.jpg";
 import SistemasTierra from "../images/Sistemas de tierra.jpeg";
@@ -9,7 +9,7 @@ import EquiposBonbeo from "../images/EQUIPOS DE BOMBEO.jpg";
 import Bombas from "../images/Bombas.jpeg";
 import Compresores from "../images/COMPRESORES.jpg";
 
-export const serviIndustrial = [
+export const serviIndustrial: Servicios[] = [
     {
         titulo: "Mantenimiento a equipos de bombeo, equipos de extracción, y aires acondicionados.",
         src: EquiposBonbeo
@@ -24,7 +24,7 @@ export const serviIndustrial = [
     }
 ];
 
-export const ingElectromecanica = [
+export const ingElectromecanica: Servicios[] = [
     {
         titulo: "Instalaciones electricas de baja y mediana tensión.",
         src: InstalacionesMedianayBaja
@@ -50,3 +50,8 @@ export const ingElectromecanica = [
         src: Cortocircuito
     }
 ];
+
+interface Servicios {
+    titulo: string;
+    src: string;
+}

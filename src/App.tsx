@@ -1,7 +1,7 @@
 //Dependencias
 import React, { Component } from "react";
 import { IFrame, Servicio, Img, Pensamientos } from "./components/Components";
-import pensamientos from "./components/Pensamientos.jsx";
+import pensamientos from "./components/Pensamientos";
 import { ingElectromecanica, serviIndustrial } from "./components/Servicios";
 
 //Imagenes
@@ -9,20 +9,16 @@ import Principal from "./images/Principal.jpg";
 import LogoPrincipal from "./images/LogotipoFinal.png";
 
 
-class App extends Component {
+class App extends Component<any, IState> {
     constructor(props) {
         super(props);
         // Se establese la fecha en le estado para definir el horario
         this.state = {
-            fecha: undefined
+            fecha: new Date()
         };
     }
 
-    componentDidMount() {
-        this.setState(state => state.fecha = new Date().getDay());
-    }
-
-    render() {
+    render(): JSX.Element {
         return (
             <div className="App">
                 {/* Inicio de la cabecera! */}
@@ -45,7 +41,7 @@ class App extends Component {
                         <p className="h3 titulos">¿Quienes somos?</p>
                         <div className="my-5 col-11 centerX mx-2 row">
                             <div className="col-md-6" id="Empresa">
-                                <p className="text-justify"><strong>Electroservicios Industriales y suministros,</strong> es una empresa con experiencia de mas de 10 años en el mantenimiento electrico-industrial (mantenimiento a subestaciones, transformadores, instalaciones eléctricas, sistemas de bombeo, torres de enfriamiento, compresores de aire, etc), brindando servicios a la indrustria metal-mecanica tales como: Neturen mexicana, Proveedora y maquiladora de licores, Unipres mexicana, entre otros.</p>
+                                <p className="text-justify"><strong>Electroservicios Industriales y suministros,</strong> es una empresa con experiencia de mas de 10 años en el mantenimiento electrico-industrial (mantenimiento a subestaciones, transformadores, instalaciones eléctricas, sistemas de bombeo, torres de enfriamiento, compresores de aire, etc), brindando servicios a la indrustria metal-mecanica tales como: Neturen mexicana, Proveedora y maquiladora de licores, Unipres mexicana, Compas, ZF Chassis Technology Aguascalientes, ZF Chassis Technology San Luis Potosí, Gohsyu Mexicana,  entre otros.</p>
                             </div>
                             <div className="col-md-6">
                                 <Img src={LogoPrincipal} className="img-simple" />
@@ -124,7 +120,7 @@ class App extends Component {
                                     <p className="text-center">Estamos a sus ordenes la 24 horas del dia, los 365 dias del año.</p>
                                     <div className="form-group">
                                         <p className="h3 text-center">Horario de Oficina</p>
-                                        <select className="form-control border-0" value={this.state.fecha}>
+                                        <select className="form-control border-0" defaultValue={this.state.fecha.getDay()}>
                                             <option value="1">Lunes. 9:00-18:00</option>
                                             <option value="2">Martes. 9:00-18:00</option>
                                             <option value="3">Miercoles. 9:00-18:00</option>
@@ -157,9 +153,16 @@ class App extends Component {
                         />
                     </article>
                 </section>
+                <footer>
+                    {/* Creación del footer */}
+                </footer>
             </div>
         );
     }
+}
+
+interface IState {
+    fecha: Date;
 }
 
 export default App;
