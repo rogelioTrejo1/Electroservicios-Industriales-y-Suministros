@@ -10,6 +10,7 @@ export const Img = (props: IImg): JSX.Element => {
             src={props.src}
             alt={props.alt}
             className={props.className}
+            loading="lazy"
         />
     );
 };
