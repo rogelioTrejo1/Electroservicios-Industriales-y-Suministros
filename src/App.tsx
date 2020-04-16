@@ -120,6 +120,7 @@ class App extends Component<any, IState> {
                                     <p className="text-center">Estamos a sus ordenes la 24 horas del dia, los 365 dias del año.</p>
                                     <div className="form-group">
                                         <p className="h3 text-center">Horario de Oficina</p>
+                                        <p className="text-center">Por cuestiones sanitarias, se esta trabajando con una modalidad de <b><i>Home Office</i></b>, por lo cual, se están recibiendo y realizando cotizaciónes de nuestros proveedores y clientes</p>
                                         <select className="form-control border-0" defaultValue={this.state.fecha.getDay()}>
                                             <option value="1">Lunes. 9:00-18:00</option>
                                             <option value="2">Martes. 9:00-18:00</option>
