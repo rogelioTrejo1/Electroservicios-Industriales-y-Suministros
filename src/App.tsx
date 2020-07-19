@@ -39,9 +39,9 @@ class App extends Component<any, IState> {
                     {/* Quienes somos! */}
                     <article className="container-fluid">
                         <p className="h3 titulos">¿Quienes somos?</p>
-                        <div className="my-5 col-11 centerX mx-2 row">
+                        <div className="my-5 col-11 mx-auto mx-2 row">
                             <div className="col-md-6" id="Empresa">
-                                <p className="text-justify"><strong>Electroservicios Industriales y suministros,</strong> es una empresa con experiencia de mas de 10 años en el mantenimiento electrico-industrial (mantenimiento a subestaciones, transformadores, instalaciones eléctricas, sistemas de bombeo, torres de enfriamiento, compresores de aire, etc), brindando servicios a la indrustria metal-mecanica tales como: Neturen mexicana, Proveedora y maquiladora de licores, Unipres mexicana, Compas, ZF Chassis Technology Aguascalientes, ZF Chassis Technology San Luis Potosí, Gohsyu Mexicana,  entre otros.</p>
+                                <p className=""><strong>Electroservicios Industriales y suministros,</strong> es una empresa con experiencia de mas de 10 años en el mantenimiento electrico-industrial (mantenimiento a subestaciones, transformadores, instalaciones eléctricas, sistemas de bombeo, torres de enfriamiento, compresores de aire, etc), brindando servicios a la indrustria metal-mecanica tales como: Neturen mexicana, Proveedora y maquiladora de licores, Unipres mexicana, Compas, ZF Chassis Technology Aguascalientes, ZF Chassis Technology San Luis Potosí, Gohsyu Mexicana,  entre otros.</p>
                             </div>
                             <div className="col-md-6">
                                 <Img src={LogoPrincipal} className="img-simple" />
