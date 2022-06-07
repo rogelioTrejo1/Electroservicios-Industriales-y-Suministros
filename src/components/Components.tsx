@@ -1,11 +1,11 @@
-import React, { CSSProperties } from "react";
+import { CSSProperties } from "react";
 
 /**
  * Img: Se genera un elemento tipo HTMLImageElement para su uso
  * @param { IImg } props 
  */
 export const Img = (props: IImg): JSX.Element => {
-    return ( 
+    return (
         <img
             src={props.src}
             alt={props.alt}
@@ -15,7 +15,7 @@ export const Img = (props: IImg): JSX.Element => {
     );
 };
 
-interface IImg  {
+interface IImg {
     src?: string | undefined;
     alt?: string | undefined;
     className?: string | undefined;
